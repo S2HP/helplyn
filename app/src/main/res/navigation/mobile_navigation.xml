@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_sites">
+
+    <fragment
+        android:id="@+id/nav_sites"
+        android:name="com.example.helplyn.ui.sites.SitesFragment"
+        android:label="@string/menu_sites"
+        tools:layout="@layout/fragment_sites">
+        <action
+            android:id="@+id/action_nav_sites_to_reportIssueFragment"
+            app:destination="@id/reportIssueFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_company"
+        android:name="com.example.helplyn.ui.addcompany.AddCompanyFragment"
+        android:label="@string/menu_add_company"
+        tools:layout="@layout/fragment_add_company" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.helplyn.ui.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/reportIssueFragment"
+        android:name="com.example.helplyn.ui.sites.ReportIssueFragment"
+        android:label="Report Issue"
+        tools:layout="@layout/fragment_report_issue">
+        <argument
+            android:name="companyName"
+            app:argType="string" />
+    </fragment>
+</navigation>
+

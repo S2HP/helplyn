@@ -1,0 +1,5 @@
+<!-- Home page layout is no longer needed and can be deleted. -->
+<!-- Fix: Add valid root element to avoid XML parse errors -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
